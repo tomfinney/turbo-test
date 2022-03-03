@@ -9,7 +9,7 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v2
 
       - name: Setup Node.js 12.x
@@ -32,5 +32,5 @@ jobs:
       - name: Commit New Version
         run: |
           git add -A
-          git commit -m "Version" || true
+          git commit -m "Changelog" || true
           git push origin dev

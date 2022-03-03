@@ -1,6 +1,6 @@
 name: Check
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   release:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Check Has Changeset
         run: |
-          git pull -f origin master:master
-          yarn changeset status --since=master
+          git pull -f origin dev:dev
+          yarn changeset status --since=dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

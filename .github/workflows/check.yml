@@ -3,7 +3,7 @@ name: Check
 on: [pull_request]
 
 jobs:
-  release:
+  check:
     name: Check
     runs-on: ubuntu-latest
     steps:

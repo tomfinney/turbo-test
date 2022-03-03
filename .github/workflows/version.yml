@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: save current date
+      - name: generate new version
         run: |
           yarn changeset version
 

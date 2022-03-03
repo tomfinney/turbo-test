@@ -22,6 +22,6 @@ jobs:
         run: yarn
 
       - name: Check Has Changeset
-        run: changeset status --since=main
+        run: yarn changeset status --since=main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

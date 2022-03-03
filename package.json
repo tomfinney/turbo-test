@@ -11,10 +11,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@changesets/cli": "^2.21.0",
     "prettier": "^2.5.1",
     "turbo": "latest"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.21.0"
   }
 }

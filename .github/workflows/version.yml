@@ -1,0 +1,28 @@
+name: Version
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: generate new version
+        run: |
+          yarn changeset version
+
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: commit
+        run: |
+          git add -A
+          git commit -m "Version"
+          git push origin dev

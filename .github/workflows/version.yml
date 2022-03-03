@@ -9,7 +9,7 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup Node.js 12.x
@@ -20,16 +20,16 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: generate new version
+      - name: Generate New Version
         run: |
           yarn changeset version
 
-      - name: setup git config
+      - name: Setup Git Config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - name: commit
+      - name: Commit New Version
         run: |
           git add -A
           git commit -m "Version" || true

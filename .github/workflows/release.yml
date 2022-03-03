@@ -24,6 +24,11 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
+      - name: Check Has Changeset
+        uses: changeset status --since=main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Release Pull Request
         uses: changesets/action@v1
         env:

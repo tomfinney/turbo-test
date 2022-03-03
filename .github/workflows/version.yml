@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  date:
+  version:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -32,5 +32,5 @@ jobs:
       - name: commit
         run: |
           git add -A
-          git commit -m "Version"
+          git commit -m "Version" || true
           git push origin dev
